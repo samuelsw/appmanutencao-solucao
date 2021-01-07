@@ -46,7 +46,7 @@ var arq         : TextFile;
 begin
   try
     try
-      localFolder :=  IncludeTrailingBackslash(ExtractFilePath(ParamStr(0))) + 'log';
+      localFolder :=  (ExtractFilePath(ParamStr(0))) + '\log';
 
       if Trim(sNomelog) = '' then
       sNomelog := 'Log - '+SomenteNumero(Datetostr(date))+'.txt';
@@ -77,12 +77,12 @@ procedure TControlExceptions.newException(e: Exception; sClassName : String);
 begin
 
   try
-//    if e is ERollbackFiles then
+//    if e is ERollbackFiles then   Dispara Alguma outra ação
 
   finally
     logAplicacao('Tipo de Excessão encontrada ......:'+e.classname +sLineBreak+
                  'Classe geradora ..................:'+sClassName+sLineBreak+
-                 'Mensagem da excação ..............:'+e.Message);
+                 'Mensagem da exceção ..............:'+e.Message);
 
 
   end;

@@ -38,6 +38,7 @@ uses
 procedure TfMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
   // Finaliza form , os objetos locais de la serão liberados
+  if fClienteServidor.Visible then
   fClienteServidor.Close;
 
   // Encerra objeto de controle de exceções

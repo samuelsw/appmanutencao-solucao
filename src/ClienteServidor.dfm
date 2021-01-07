@@ -23,9 +23,6 @@ object fClienteServidor: TfClienteServidor
     Height = 17
     Align = alBottom
     TabOrder = 0
-    ExplicitLeft = 1
-    ExplicitTop = 74
-    ExplicitWidth = 513
   end
   object btEnviarSemErros: TButton
     Left = 56

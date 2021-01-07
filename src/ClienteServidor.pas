@@ -10,7 +10,7 @@ uses
 type
   TServidor = class
   private
-    FPath: AnsiString;
+    FPath: String;
   public
     constructor Create;
     //Tipo do parâmetro não pode ser alterado
@@ -58,7 +58,7 @@ var i           : integer;
     sr          : TSearchRec;
     localFolder : String;
 begin
-  localFolder :=  IncludeTrailingBackslash(ExtractFilePath(ParamStr(0))) + 'Servidor\';
+  localFolder :=  (ExtractFilePath(ParamStr(0))) + '\Servidor\';
 
   I := FindFirst(localFolder+'*.*', faAnyFile, SR);
   while I = 0 do
@@ -73,6 +73,10 @@ procedure TfClienteServidor.FormClose(Sender: TObject; var Action: TCloseAction)
 begin
   // Libera objetos locais
    freeandnil(FServidor);
+   if Assigned(CopyController.Servidor) then
+   CopyController.Servidor.free;
+   freeandnil(CopyController);
+
 end;
 
 procedure TfClienteServidor.btEnviarComErrosClick(Sender: TObject);
@@ -173,7 +177,7 @@ end;
 procedure TfClienteServidor.FormCreate(Sender: TObject);
 begin
   inherited;
-  FPath := IncludeTrailingBackslash(ExtractFilePath(ParamStr(0))) + 'pdf.pdf';
+  FPath := (ExtractFilePath(ParamStr(0))) + '/pdf.pdf';
   FServidor := TServidor.Create;
 
 end;
@@ -200,9 +204,11 @@ var
   cds: TClientDataSet;
   FileName: string;
 begin
+  cds := TClientDataset.Create(nil);
+
   try
     try
-      cds := TClientDataset.Create(nil);
+
       cds.Data := AData;
 
       {$REGION Simulação de erro, não alterar}
