@@ -28,7 +28,7 @@ Dica: antes de iniciar as alterações, leia todo o README.
 
 `Implementação 2: na tela ClienteServidor, implemente o comportamento da barra de progresso para mostrar o progresso da operação de envio de arquivos.`
 
- -Implementado o comportamento de progresso.
+ - Implementado o comportamento de progresso.
 
 `Implementação 3 (opcional): na tela ClienteServidor, implemente o comportamento do botão "Enviar paralelo". Esse botão deve fazer a mesma coisa que o botão "Enviar sem erros", porém de forma paralelizada, com objetivo de ganhar performance. Pense em uma solução que irá funcionar mesmo que a constante QTD_ARQUIVOS_ENVIAR tivesse valores mais altos, como mil ou dez mil`
 
