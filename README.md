@@ -24,7 +24,7 @@ Dica: antes de iniciar as alterações, leia todo o README.
 
 `Implementação 1: implemente um gerenciador de exceções no projeto. A cada exceção gerada, independente do ponto da aplicação que ocorra, deve passar pelo gerenciador, e a classe e mensagem da exceção devem ser salvas em um arquivo de log. Depois de salva a mensagem no log, a exceção deve ser levantada normalmente. Fica a critério do candidato se quiser criar uma tela específica para mostrar a exceção, ou se quiser tratar algumas exceções. Isso é opcional.`
 
- - A Classe TControlExceptions foi implementada ligada a um wraper de exceptions para realizar gravação do log de forma glopal. Mapei algumas exceções no contexto do projeto.
+ - A Classe TControlExceptions foi implementada ligada a um wrapper  de exceptions para realizar gravação do log de forma glopal. Mapei algumas exceções no contexto do projeto.
 
 `Implementação 2: na tela ClienteServidor, implemente o comportamento da barra de progresso para mostrar o progresso da operação de envio de arquivos.`
 
